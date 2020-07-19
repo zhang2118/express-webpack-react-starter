@@ -11,12 +11,18 @@ const app = express(),
             compiler = webpack(config)
 
 app.use(webpackDevMiddleware(compiler, {
-  publicPath: config.output.publicPath
+  publicPath: config.output.publicPath,
+  noInfo: true
 }))
 
-app.use(webpackHotMiddleware(compiler))
+app.use(webpackHotMiddleware(compiler, {
+  log: false,
+  path: "/__what",
+  heartbeat: 2000
+}))
 
 app.get('*', (req, res, next) => {
+  console.log(HTML_FILE);
   compiler.outputFileSystem.readFile(HTML_FILE, (err, result) => {
   if (err) {
     return next(err)
@@ -24,7 +30,7 @@ app.get('*', (req, res, next) => {
   res.set('content-type', 'text/html')
   res.send(result)
   res.end()
-  })
+  });
 })
 
 const PORT = process.env.PORT || 8080
