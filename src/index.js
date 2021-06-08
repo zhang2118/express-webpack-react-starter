@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Message from './js/Message';
-import logMessage from './js/logger';
+// import logMessage from './js/logger';
 import './css/style.css';
 
 ReactDOM.render(

@@ -22,6 +22,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "mongodb": "2.2.36",
+    "prettyjson": "^1.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
@@ -39,7 +40,7 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^7.5.0",
     "eslint-loader": "^4.0.2",
-    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react": "^7.24.0",
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
