@@ -20,7 +20,7 @@
   "author": "Wensheng Zhang",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mongodb": "^3.6.9",
     "prettyjson": "^1.2.1",
     "react": "^16.13.1",
